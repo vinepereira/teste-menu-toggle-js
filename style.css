@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    background-color: #f4f0eb;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+.menu-mobile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    justify-items: center;
+}
+
+.list-menu-mobile {
+    display: grid;
+    justify-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.list-menu-mobile span {
+   
+    border: 1px solid #faf7f3;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    animation: animationLogo .5s forwards;
+}
+
+@keyframes animationLogo {
+    0% {
+        transform: scale(1) translate3d(0, 30px, 0);
+        opacity: .5;
+    }
+
+    100% {
+        transform: scale(1.1) translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.menu-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-container li,
+.menu-mobile-container li {
+    list-style-type: none;
+}
+
+/* EFEITOS BORDA CORRENDO NOS LINKS */
+.fx li a {
+    
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.fx li a::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: calc(100% - 40px);
+    background-color: #000;
+    transition: transform .3s ease-in-out;
+    transform: scaleX(0) translateY(2px);
+    transform-origin: right;
+
+}
+
+.fx li a:hover::after {
+    transform: scaleX(1) translateY(2px);
+    transform-origin: left;
+}
+
+@media (min-width:650px) {
+    .menu-mobile-container,
+    .menu-mobile {
+        display: none;
+    }
+
+}
+
+@media (max-width:650px) {
+    ul.menu-desktop {
+        display: none;
+    }
+}
+
+.desativa {
+    display: none !important;
+}

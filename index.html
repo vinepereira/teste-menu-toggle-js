@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Menu Toggle JS</title>
+</head>
+<body>
+    <header class="container">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/logo.png" alt="Logomarca"></a>
+            </div>
+            <div class="menu-mobile">
+                <img src="./img/menu-aberto.png" alt="Menu Hambúrguer">
+                <img class="desativa" src="./img/x.png" alt="Menu Hambúrguer">
+            </div>
+            <ul class="menu-desktop fx">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div class="menu-mobile-container">
+            <ul class="list-menu-mobile fx desativa">
+                <li><a href="#">Home</a></li>
+                <span></span>
+                <li><a href="#">Serviços</a></li>
+                <span></span>
+                <li><a href="#">Sobre</a></li>
+                <span></span>
+                <li><a href="#">Contato</a></li>
+                <span></span>
+            </ul>
+        </div>
+    </header>
+    <script src="./script.js"></script>
+</body>
+</html>
